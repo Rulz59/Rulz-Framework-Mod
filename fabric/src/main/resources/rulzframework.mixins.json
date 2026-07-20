@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.rulz59.mixin.fabric",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

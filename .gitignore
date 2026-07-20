@@ -1,0 +1,53 @@
+# Gradle
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ / JetBrains
+.idea/
+*.iml
+out/
+
+# VSCode
+.vscode/
+
+# Kotlin
+.kotlin/
+*.kotlin_module
+
+# Loom / Minecraft
+run/
+logs/
+crash-reports/
+remappedJars/
+remappedSources/
+
+# Fabric / NeoForge cache
+fabric-loom-cache/
+neoforge-loom-cache/
+
+# JVM
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local environment
+.env
+.env.local
+
+# Generated artifacts
+*.jar
+*.war
+*.zip
+*.tar.gz
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
