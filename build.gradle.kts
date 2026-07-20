@@ -18,6 +18,19 @@ base {
 
 val minecraftVersion = rootProject.property("minecraft_version").toString()
 
+// Mappings of the versions from gradle.properties to be used in each mod loader’s build.gradle.kts
+extra["resourceProperties"] = mapOf(
+    "version" to rootProject.property("mod_version"),
+    "mod_id" to rootProject.property("archives_name"),
+    "mod_name" to rootProject.property("mod_name"),
+    "mod_description" to rootProject.property("mod_description"),
+    "mod_authors" to rootProject.property("mod_authors"),
+    "mod_license" to rootProject.property("mod_license"),
+    "mod_icon" to "assets/${rootProject.property("archives_name")}/icon.png",
+    "mod_homepage" to rootProject.property("mod_homepage"),
+    "mod_issues" to rootProject.property("mod_issues")
+)
+
 // If this root script is meant to configure all subprojects:
 subprojects {
     // Make sure these plugins are actually applied to child modules
