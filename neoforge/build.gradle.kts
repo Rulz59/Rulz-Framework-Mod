@@ -75,6 +75,7 @@ tasks.named<Copy>("processResources") {
 tasks.named<ShadowJar>("shadowJar") {
     configurations = listOf(shadowBundle)
     archiveClassifier.set("dev-shadow")
+    from(project(":common").sourceSets.main.get().output)
 }
 
 tasks.named<RemapJarTask>("remapJar") {
