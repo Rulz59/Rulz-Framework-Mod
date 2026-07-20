@@ -3,23 +3,12 @@ import org.gradle.api.JavaVersion
 import org.gradle.api.publish.maven.MavenPublication
 
 plugins {
-    // Kotlin
-    kotlin("jvm") version "2.0.20"
-
-    // Architectury core plugin
-    id("architectury-plugin") version "3.4-SNAPSHOT"
-
-    // Loom is declared here but applied per-module (Fabric / NeoForge)
-    id("dev.architectury.loom") version "1.9.436" apply false
-
-    // Needed for `java {}` and `withSourcesJar()`
+    kotlin("jvm")
+    id("architectury-plugin")
+    id("dev.architectury.loom") apply false
+    id("com.github.johnrengelman.shadow") apply false
     id("java")
-
-    // Needed for `publishing {}` / `publications {}` / MavenPublication
     id("maven-publish")
-
-    // Shadow plugin for creating fat jars (used in Fabric / NeoForge modules)
-    id("com.github.johnrengelman.shadow") version "8.1.1" apply false
 }
 
 // This was inside `plugins {}` before — that’s why `base` exploded

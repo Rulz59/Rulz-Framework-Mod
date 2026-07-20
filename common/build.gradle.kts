@@ -16,3 +16,12 @@ dependencies {
     implementation("dev.architectury:architectury:${property("architectury_api_version")}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:${property("kotlin_version")}")
 }
+
+tasks.named<Copy>("processResources") {
+    filesMatching("rulzframework.mixins.json") {
+        expand(
+            "mod_id" to project.property("archives_name")
+        )
+    }
+}
+

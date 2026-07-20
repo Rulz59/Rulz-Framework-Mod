@@ -1,17 +1,17 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+issueTrackerURL = "${mod_issues}"
+license = "${mod_license}"
 
 [[mods]]
-modId = "rulzframework"
+modId = "${mod_id}"
 version = "${version}"
-displayName = "Rulz Framework Mod"
-authors = "Me!"
-description = '''
-This is an example description! Tell everyone what your mod is about!
-'''
-#logoFile = ""
+displayName = "${mod_name}"
+authors = "${mod_authors}"
+description = "${mod_description}"
+displayURL = "${mod_homepage}"
+logoFile = "${mod_icon}"
+
 
 [[dependencies.rulzframework]]
 modId = "neoforge"
